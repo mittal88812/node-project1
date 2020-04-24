@@ -1,0 +1,93 @@
+<html>
+ <head>
+  <title>Signin</title>
+  <script type="text/javascript">
+     function validate(){
+	    var username=document.getElementById("uname");
+	    var useremail=document.getElementById("uemai");
+	    var userpassword=document.getElementById("upassw");
+	    var userrepassword=document.getElementById("repassw");
+	    if(username.value.trim() ==""){
+	          username.style.background="black";
+	          document.getElementById("blur1").style.visibility="visible";
+	     return false;
+	     }
+
+
+	     if(useremail.value.trim() ==""){
+		           useremail.style.background="black";
+		           document.getElementById("blur2").style.visibility="visible";
+		      return false;
+		      }
+		      if(userpassword.value.trim() ==""||userpassword.value.length<5){
+			  	           userpassword.style.background="black";
+			  	           document.getElementById("blur3").style.visibility="visible";
+			  	      return false;
+		      }
+		      if(userrepassword.value!==userpassword.value){
+				  	           userrepassword.style.background="black";
+				  	           document.getElementById("blur4").style.visibility="visible";
+				  	      return false;
+			      }
+
+
+	else{
+		        return true;
+	     }
+   }
+  </script>
+ </head>
+ <body>
+<style>
+     body{
+ background-image:url(challenge1.jpeg);
+ background-position:center;
+ background-size:100%;
+ }
+ #center{
+  height:500px;
+  width:500px;
+  margin-top:50px;;
+  margin-left:auto;
+  margin-bottom:auto;
+  margin-right:auto;
+  background:rgba(0,0,0,0.3);
+ }
+ #text{
+ text-align:center;
+ padding-top:20px;
+ }
+ #submit{
+  border:1px solid black;
+        border-radius:5px;
+       padding:10px 20px 10px 20px;
+  }
+  #para{
+   text-align:center;
+   color:white;
+  }
+  #width{
+   margin-left:15px;
+   color:white;
+  }
+ 
+</style>
+   <div id="center">
+       <h2 id="text">Balaji Building Material &Comp.</h2>
+       <form onsubmit="return validate()" action="/success" method="POST">
+	          <fieldset>
+	           <legend>Sign in Details-</legend>
+	            <label>Name:<sup>*</sup></br><input class="invisible" name="first_name" type="text" id="uname" placeholder="Username.."></label></br><label id="blur1" style="color:white; visibility:hidden">Username can't be empty.</label></br>
+
+	            <label>Email:<sup>*</sup></br><input class="invisible" name="email" type="email" id="uemai" placeholder="Email.."></label></br><label id="blur2" style="color:white; visibility:hidden">Email can't be empty.</label></br>
+	            <label>Password:<sup>*</sup></br><input class="invisible" type="password" id="upassw"placeholder="Password.."></label></br><label id="blur3" style="color:white; visibility:hidden">Neither password can't be empty nor contain less than 5 words.</label></br>
+	            <label>Re-enter Password:<sup>*</sup></br><input class="invisible" type="password" id="repassw"placeholder="Re-enter Password.."></label></br><label id="blur4" style="color:white; visibility:hidden">Password doesn't match.</label></br>
+	             <button type="submit" id="submit">Sign in</button>
+	          </fieldset>
+	        </form>
+	        <p id="para">Already have an Account?<a href="login.html">login</a></p>
+	        <p id="width">Note: (*) This sign indicate that this entry is mandatory.</p>
+
+   </div>
+ </body>
+</html>

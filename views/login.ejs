@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <script>
+     function validateform(){
+       
+       var name=document.getElementById("name").value;
+       var email=document.getElementById("email").value;
+       var password=document.getElementById("pass").value;
+
+       if (name==null || name==""){
+                 document.getElementById("blur1").style.visibility="visible";
+         return false;
+        }
+
+        if (email==null || email==""){
+                 document.getElementById("blur2").style.visibility="visible";
+         return false;
+        }
+         if (password==null || password==""){
+                 document.getElementById("blur3").style.visibility="visible";
+				 return false;
+         }
+
+
+     }
+    
+
+
+   </script>
+  
+  <title>Login</title>
+  
+ </head>
+ <body>
+     <style>
+          body{
+          background-image:url(challenge1.jpeg);
+          background-position:center;
+          background-size:100%;
+          }
+          #center{
+            height:500px;
+            width:500px;
+            margin-top:50px;
+            margin-left:auto;
+            margin-bottom:50px;
+            margin-right:auto;
+            background:rgba(0,0,0,0.3);
+          }
+          #text{
+          text-align:center;
+          padding-top:20px;
+          }
+          #submit{
+          border:1px solid black;
+                border-radius:5px;
+                padding:10px 20px 10px 20px;
+          }
+          #para{
+            text-align:center;
+            color:white;
+          }
+          #width{
+            margin-left:15px;
+            color:white;
+          }
+          
+              </style>
+
+    <div id="center">
+       <h2 id="text">Balaji Building Material &Comp.</h2>
+     <form action="/shopping" method="post" onsubmit="return validateform()">
+       <fieldset>
+        <legend>Login Details-</legend>
+         <label>Name:<sup>*</sup></br><input name="first_name" type="text" id="name" placeholder="Username.."></label><label id="blur1" style="color:black; visibility:hidden">     Username can't be empty.</label></br></br>
+
+         <label>Email:<sup>*</sup></br><input type="email" name="email" id="email" placeholder="Email.."></label><label id="blur2" style="color:black; visibility:hidden">      Email can't be empty.</label></br></br>
+         <label>Password:<sup>*</sup></br><input type="password" id="pass" placeholder="Password.."></label><label id="blur3" style="color:black; visibility:hidden"> Password can't be less than 5 word.</label></br></br>
+          <button type="submit" id="submit">login</button>
+       </fieldset>
+     </form>
+     <p id="para">Don't have Account?<a href="signin.html">Sign in</a></p></br>
+     <p id="width">Note: (*) This sign indicate that this entry is mandatory.</p>
+
+    </div>
+ </body>
+</html>

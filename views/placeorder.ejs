@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <script>
+      function validateform(){
+        var name=document.getElementById("name").value;
+        var contact=document.getElementById("contact").value;
+        var address=document.getElementById("address").value;
+        var email=document.getElementById("email").value;
+        if (name==null || name==""){
+                 document.getElementById("blur1").style.visibility="visible";
+         return false;
+        }
+        if (contact==null || contact==""){
+                 document.getElementById("blur2").style.visibility="visible";
+         return false;
+        }
+        if (address==null || address==""){
+                 document.getElementById("blur3").style.visibility="visible";
+         return false;
+        }
+        if (email==null || email==""){
+                 document.getElementById("blur4").style.visibility="visible";
+         return false;
+        }
+      }
+    </script>
+
+   <title>
+    Shri Balaji Building Material Comp.
+   </title>
+   
+    <h1 id="heading1">Shri Balaji Bulding Material & Comp.
+    <br/>
+    <br/></h1>
+
+   </head>
+   <body>
+   <style>
+      
+     
+     #heading1{
+      
+      padding-top:20px;
+      width:750px;
+      text-align:center;
+      margin-left:auto;
+      margin-right:auto;
+      margin-bottom:50px;
+      
+      }
+      .width{
+      width:500px;
+      margin-left:50px;
+      }
+      .mid{
+
+      border:1px solid black;
+      border-radius:5px;
+      padding:10px 20px 10px 20px;
+      }
+    </style>
+    
+    
+    <form class="main" action="/review" method="POST" onsubmit="return validateform()">
+     <fieldset class="width">
+      <legend>Enter Contact Details</legend>
+       <label>Name:<sup>*</sup></br><input type="text" name="username" id="name"></label><span><label id="blur1" style="color:black; visibility:hidden"> Name can't be empty.</label></span></br>
+       <label>Contact no:<sup>*</sup></br><input type="text" name="contact" id="contact"></label><span><label id="blur2" style="color:black; visibility:hidden"> Contact can't be empty.</label></span></br>
+       <label>Address:<sup>*</sup></br><input type="text" name="address" id="address" ></label><span><label id="blur3" style="color:black; visibility:hidden"> Address can't be empty.</label></span></br>
+       <label>Nearby:</br><input type="text" name="nearby"/></label></br>
+       <label>Email:<sup>*</sup></br><input type="email" id="email" name="email"/></label><span><label id="blur4" style="color:black; visibility:hidden"> Email can't be empty.</label></span></br>
+       <button type="submit">Review Order</button>
+    </fieldset>
+    </form>
+    <p class="width">Note: This sign indicate that this entry is mandatory.</p>
+    </body>
+ </html>

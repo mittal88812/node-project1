@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+
+       <script>
+			   function validateform(){
+			   var name=document.getElementById("name").value;
+			   var password=document.getElementById("pass").value;
+
+			   if (name==null || name==""){
+                 alert("Name can't be blank enter something");
+                 document.getElementById("blur1").style.visibility="visible";
+				 return false;
+			   }else if(password.length<6){
+				 alert("Password must be at least 6 characters long.");
+				 return false;
+                 }
+                 return true;
+			   }
+       </script>
+
+
+        <title>
+            checking
+        </title>
+
+    </head>
+    <body>
+
+    <form method="post" action="#" onsubmit="return validateform()" >
+	Name: <input type="text" id="name" name="name"><br/><span id="blur1" style="color:black; visibility:hidden">Name can't be empty</span><br/>
+	Password: <input type="password" id="pass" name="password"><br/>
+    <button type="submit">submit</button>
+</form>
+
+    </body>
+</html>

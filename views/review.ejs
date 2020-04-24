@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <title>Shopping page </title>
+        <h1 id="heading1" style="text-align: center">Shri Balaji Bulding Material & Comp.</h1><br/><br/>
+        <script>
+            // function sendMail()
+            // {
+            //     var mailBody=document.getElementById('mailBody').innerHTML;
+            //     window.location="mailto:tushar.mittal.cs.2018@miet.ac.in?subject=hii&body="+mailBody;
+            // }
+            function check(){
+              var testing=document.getElementById("test").value;
+              if(testing===""){
+                console.log("sorry");
+              }
+              else{
+                console.log("hello");
+              }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <style>
+            .moving{
+                margin-left: 20px;;
+            }
+        </style>
+        <div id="mailbody">
+        <h1 style="margin-left: 30px">Your Orders/-</h1><br/><br/>
+        <label class="moving">Name:<span><h6><%=userDetails.name%></h6></span></label><br/>
+        <label class="moving">Contact:<span><h6><%=userDetails.contact%></h6></span></label><br/>
+        <label class="moving">Address:<span><h6><%=userDetails.address%></h6></span></label><br/>
+        <label class="moving">Nearby:<span><h6><%=userDetails.nearby%></h6></span></label><br/>
+        <label class="moving">Email:<span><h6><%=userDetails.email%></h6></span></label><br/><br/>
+        <table class="table table-bordered moving">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sand</td>
+                <td><%=productrates.sand%></td>
+              </tr>
+              <tr>
+                <td>Stone</td>
+                <td><%=productrates.stone%></td>
+              </tr>
+              <tr>
+                <td>Bajarpur</td>
+                <td><%=productrates.bajarpur%></td>
+              </tr>
+              <tr>
+                <td>Ultratech</td>
+                <td><%=productrates.ultratech%></td>
+              </tr>
+              <tr>
+                <td>BigCem</td>
+                <td><%=productrates.bigcem%></td>
+              </tr>
+              <tr>
+                <td>JkSuper</td>
+                <td><%=productrates.jksuper%></td>
+              </tr>
+              <tr>
+                <td>Brick</td>
+                <td><%=productrates.brick%></td>
+              </tr>
+              <tr>
+                <td>Chemical</td>
+                <td><%=productrates.chemical%></td>
+              </tr>
+              <tr>
+                <td>Soil</td>
+                <td><%=productrates.soil%></td>
+              </tr>
+              <tr>
+                <h1><td>Total</td></h1>
+                <td><%=total.final%></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <form action="ordersuccess" method="POST">
+         <button type="submit" value="submit">Submit</button>
+        </form>
+
+      </body>
+</html>

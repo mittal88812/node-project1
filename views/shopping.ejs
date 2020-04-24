@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Shopping page </title>
+  <h1 id="heading1" style="text-align: center">Shri Balaji Bulding Material & Comp.
+      <br/>
+    <br/></h1>
+  </head>
+ <body>
+ <style>
+  /* #heading1{
+       border:2px solid black;
+       padding-top:20px;
+       width:750px;
+       text-align:center;
+       margin-left:auto;
+       margin-right:auto;
+       background-color:rgb(83,52,19);
+       margin-bottom:50px;
+      } */
+
+   .orderform{
+       margin-left:52px;
+   }   
+   .align{
+   margin-left:50px;
+   margin-bottom:20px;
+   }
+   table{
+   width:600px;
+   }
+   .odd{
+   padding:2px;
+   }
+   .even{
+   padding:3px;
+   background-color:#efefef;
+   }
+    .mid{
+         margin-left:50px;
+         border:1px solid black;
+         border-radius:5px;
+         padding:10px 20px 10px 20px;
+      }
+      
+ </style>
+ <p class="align"><b>Welcome</b>,This page is to provide a list of items and their value. You can also add items in your bucket list.</p>
+ <h1 class="align">Item List-</h1>
+ <table class="align">
+  <tr>
+  <td><b>item</b></td>
+  <td><b>Unit(min.)</b></td>
+  <td><b>Cost</b></td>
+  </tr>
+    <tr class="odd">
+     <td><em>Sand(Reet)</em></td>
+     <td><em>100 kg(1N)</em></td>
+     <td><em>45Rs.</em></td>
+    </tr>
+     <tr class="even">
+     <td><em>Stone(Roodi)</em></td>
+     <td><em>100 kg(1N)</em></td>
+     <td><em>95Rs.</em></td>
+     </tr>
+    <tr class="odd">
+     <td><em>Bajarpur</em></td>
+     <td><em>100 kg(1N)</em></td>
+     <td><em>95Rs.</em></td>
+    </tr>
+     <tr class="even">
+     <td><em>Cement-<ul><li>Ultratech</li><li>BigCem</li><li>Jk Super</li>     </ul></em></td>
+     <td><em><br/>1 beg</em></td>
+     <td><em>360<br/>340<br/>330</em></td>
+     </tr>
+    <tr class="odd">
+	     <td><em>Brick(Itt)</em></td>
+	     <td><em>1000(1N) </em></td>
+	     <td><em>4750Rs.</em></td>
+	    </tr>
+	   <tr class="even">
+     <td><em>Chemical(Marbel)</em></td>
+     <td><em>1 beg</em></td>
+     <td><em>250Rs.</em></td>
+     </tr>
+     <tr class="odd">
+	      <td><em>Soil</em></td>
+	      <td><em>100 kg(1N)</em></td>
+	      <td><em>35Rs.</em></td>
+    </tr>
+<tr class="even">
+     <td colspan="2"><em>Rented Mterial(ladder,Spade,Shovel etc.)</em></td>
+     <td><em>Based on avilability</em></td>
+     </tr>
+ </table>
+ <p class="align"><b><em>Note: Rates and avilability of the items may be changed without prior notice.</em></b></p>
+ <p class="align">We hope that you have read the item list, so now you can plac your order in the Editor below. </p>
+ <h3 class="align" >Thank You.</h3>
+ <h4 class="align" >Order/-</h4>
+ <div class="orderform">
+ <form  action="/placeorder" method="POST">
+    <label>Sand(Reet):</label><span><input style="margin-left: 30px" type="number" name="sand"/></span><br/>
+    <label>Stone(Roodi):</label><span><input type="number" style="margin-left: 16px" name="stone"/></span><br/>
+    <label>Bajarpur:</label><span><input type="number" name="bajarpur" style="margin-left: 48px"/></span><br/>
+    <label>Cement:</label><br/>
+    <label>Ultratech-</label><input type="number" name="ultratech" style="margin-left: 40px"/></span><br/>
+    <label>BigCem-</label><input type="number" name="bigcem" style="margin-left: 50px"/></span><br/>
+    <label>JkSuper-</label><input type="number" name="jk" style="margin-left: 50px"/></span><br/>
+    <label>Brick(Itt):</label><span><input type="number" name="brick" style="margin-left: 50px"/></span><br/>
+    <label>Chemical:</label><span><input type="number" name="chemical" style="margin-left: 44px"/></span><br/>
+    <label>Soil:</label><span><input type="number" name="soil" style="margin-left: 83px"/></span><br/><br/>
+    <button type="submit" id="submit" >place order</button>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+ </form>
+</div>
+
+
+  </body>
+</html>
