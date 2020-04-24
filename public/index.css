@@ -1,0 +1,26 @@
+#center1{
+    text-align:center;
+}
+.center{
+    text-align:center;
+}
+.invisible{
+    background:white;
+}
+#text1{
+    width:300px;
+}
+#text2{
+    width:300px;
+}
+#text3{
+    width:300px;
+}
+#blur4{
+    width:400px;
+    margin-left:auto;
+    margin-right:auto;
+}
+#name{
+    color:rgb(255, 255, 255);
+}
